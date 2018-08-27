@@ -177,11 +177,11 @@ case "$q4" in
 esac
 
 case "$q5" in
-1) pq5=3
-2) pq5=3
-3) pq5=2
-4) pq5=3
-5) pq5=1
+1) pq5=3 ;;
+2) pq5=3 ;;
+3) pq5=2 ;;
+4) pq5=3 ;;
+5) pq5=1 ;;
 esac
 
 case "$q6" in
