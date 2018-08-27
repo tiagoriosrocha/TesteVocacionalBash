@@ -144,39 +144,39 @@ resp1=$?
 #Atribuindo pesos as respostas
 
 
-case $q1 in
-1) pq1=1
-2) pq1=1
-3) pq1=1
-4) pq1=3
-5) pq1=2
+case "$q1" in
+1) pq1=1 ;;
+2) pq1=1 ;;
+3) pq1=1 ;;
+4) pq1=3 ;;
+5) pq1=2 ;;
 esac
 
-case $q2 in
-1) pq2=3
-2) pq2=2
-3) pq2=2
-4) pq2=3
-5) pq2=1
+case "$q2" in
+1) pq2=3 ;;
+2) pq2=2 ;;
+3) pq2=2 ;;
+4) pq2=3 ;;
+5) pq2=1 ;;
 esac
 
-case $q3 in
-1) pq3=3
-2) pq3=3
-3) pq3=2
-4) pq3=1
-5) pq3=1
+case "$q3" in
+1) pq3=3 ;;
+2) pq3=3 ;;
+3) pq3=2 ;;
+4) pq3=1 ;;
+5) pq3=1 ;;
 esac
 
-case $q4 in
-1) pq4=3
-2) pq4=3
-3) pq4=2
-4) pq4=3
-5) pq4=3
+case "$q4" in
+1) pq4=3 ;;
+2) pq4=3 ;;
+3) pq4=2 ;;
+4) pq4=3 ;;
+5) pq4=3 ;;
 esac
 
-case $q5 in
+case "$q5" in
 1) pq5=3
 2) pq5=3
 3) pq5=2
@@ -184,44 +184,44 @@ case $q5 in
 5) pq5=1
 esac
 
-case $q6 in
-1) pq6=3
-2) pq6=2
-3) pq6=3
-4) pq6=2
-5) pq6=1
+case "$q6" in
+1) pq6=3 ;;
+2) pq6=2 ;;
+3) pq6=3 ;;
+4) pq6=2 ;;
+5) pq6=1 ;;
 esac
 
-case $q7 in
-1) pq7=1
-2) pq7=1
-3) pq7=3
-4) pq7=3
-5) pq7=1
+case "$q7" in
+1) pq7=1 ;;
+2) pq7=1 ;;
+3) pq7=3 ;;
+4) pq7=3 ;;
+5) pq7=1 ;;
 esac
 
-case $q8 in
-1) pq8=1
-2) pq8=1
-3) pq8=1
-4) pq8=3
-5) pq8=1
+case "$q8" in
+1) pq8=1 ;;
+2) pq8=1 ;;
+3) pq8=1 ;;
+4) pq8=3 ;;
+5) pq8=1 ;;
 esac
 
-case $q9 in
-1) pq9=3
-2) pq9=1
-3) pq9=1
-4) pq9=2
-5) pq9=1
+case "$q9" in
+1) pq9=3 ;;
+2) pq9=1 ;;
+3) pq9=1 ;;
+4) pq9=2 ;;
+5) pq9=1 ;;
 esac
 
-case $q10 in
-1) pq10=1
-2) pq10=3
-3) pq10=2
-4) pq10=2
-5) pq10=1
+case "$q10" in
+1) pq10=1 ;;
+2) pq10=3 ;;
+3) pq10=2 ;;
+4) pq10=2 ;;
+5) pq10=1 ;;
 esac
 
 ############################################################
@@ -229,15 +229,15 @@ esac
 
 media = ($pq1+$pq2+$pq3+$pq4+$pq5+$pq6+$pq7+$pq8+$pq9+$pq10)/10
 
-if [$media -lt 1.5]; then #menor que 1.5
+if [ $media -eq 1 ] ; then #menor que 1.5
 whiptail --title "Você não tem Vocação para o Curso de Ciência da Computação" --msgbox "Você não tem a vocação para ciência da computação e está fantasiando muito sobre esta profissão. Muitas vezes amigos e familiares tem o costume de nos indicar uma profissão para seguir, eles não fazem isso por mau, estão pensando no seu futuro. Você não precisa seguir esta indicação dos seus amigos e familiares. Para sermos felizes em nossa vida pessoal é essencial que sejamos realizados em nossa profissão. Procure se informar sobre os outros cursos do IFRS e siga a sua verdadeira vocação.." --fb 15 70
 fi
 
-if [$media -ge 1.5] && [$media -le 2]; then #maior ou igual a 1.5 && menor ou igual a 2
+if [ $media -ge 1 ] && [ $media -le 2 ] ; then #maior ou igual a 1.5 && menor ou igual a 2
 whiptail --title "O Curso de Ciência da Computação é uma Boa Opção para Você" --msgbox "Além de gostar do Curso de Ciência da Computação, você tem uma boa idéia sobre o dia a dia dos desenvolvedores e programadores. Você tem todos os atributos necessários para seguir a carreira de ciência da computação e conseguir um bom sucesso na profissão, no entanto, vale a pena pesquisar melhor e procurar conhecer também algumas profissões relacionadas." --fb 15 70
 fi
 
-if [$media -gt 2]; then #maior que 2
+if [ $media -gt 2 ] ; then #maior que 2
 whiptail --title "O Curso de Ciência da Computação é a escolha ideal para você" --msgbox "Você adora jogar videogame e vive navegando na internet. E, no Natal, a família e os amigos pedem sua opinião na hora de decidir qual é o melhor modelo de uma nova câmera digital, por considerar seu parecer importante. Venha cursar Ciência da Computação no IFRS - Ibirubá!!!" --fb 15 70
 fi
 
