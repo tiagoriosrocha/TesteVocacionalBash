@@ -253,6 +253,9 @@ whiptail --title "O que faz o cientista da computação?" --msgbox "O bacharel�
 
 echo "$nome;$telefone;$email;$q1;$q2;$q3;$q4;$q5;$q6;$q7;$q8;$q9;$q10;$media" >> respostas_teste.txt
 
+############################################################
+#frescura
+
 done
 
 
