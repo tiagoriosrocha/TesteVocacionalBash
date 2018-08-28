@@ -1,22 +1,6 @@
 #!/bin/bash
 
-pq9=2
 
-case "$pq9" in
-1) echo "um"
-;;
-2) echo "dois"
-;;
-3) echo "tres"
-;;
-4) echo "quatro"
-;;
-5) echo "cinco"
-;;
-esac
+echo $(( 100 * 1 / 6 )) | sed 's/..$/.&/'
 
-media=0
-
-if [[ $media -lt 1.5 ]]; then #menor que 1.5
-echo  "teste"
-fi
+echo 2k 1 3 /p | dc
