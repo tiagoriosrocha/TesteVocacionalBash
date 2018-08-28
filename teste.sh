@@ -227,8 +227,8 @@ esac
 ############################################################
 #calculando e exibindo o resultado
 
-sum= $pq1 + $pq2 + $pq3 + $pq4 + $pq5 + $pq6 + $pq7 + $pq8 + $pq9 + $pq10
-media= sum / 10
+sum=$(($pq1+$pq2+$pq3+$pq4+$pq5+$pq6+$pq7+$pq8+$pq9+$pq10))
+media=$((sum/10))
 
 if [ $(echo "$media < 1.5" | bc) -eq 1 ] ; then #menor que 1.5
 	whiptail --title "Você não tem Vocação para o Curso de Ciência da Computação" --msgbox "Você não tem a vocação para ciência da computação e está fantasiando muito sobre esta profissão. Muitas vezes amigos e familiares tem o costume de nos indicar uma profissão para seguir, eles não fazem isso por mau, estão pensando no seu futuro. Você não precisa seguir esta indicação dos seus amigos e familiares. Para sermos felizes em nossa vida pessoal é essencial que sejamos realizados em nossa profissão. Procure se informar sobre os outros cursos do IFRS e siga a sua verdadeira vocação.." --fb 15 70
@@ -255,11 +255,6 @@ whiptail --title "O que faz o cientista da computação?" --msgbox "O bacharel�
 
 echo "$nome;$telefone;$email;$q1;$q2;$q3;$q4;$q5;$q6;$q7;$q8;$q9;$q10;$media" >> respostas_teste.txt
 
-############################################################
-#frescura
-cmatrix
-
-sleep 5
 
 done
 
