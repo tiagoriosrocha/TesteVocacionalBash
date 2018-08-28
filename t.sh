@@ -1,5 +1,13 @@
 #!/bin/bash
 
-media=$((10+3))
+{
+ echo 25
+ sleep 1
+ echo 50
+ sleep 1
+ echo 75 
+ sleep 1
+ echo 100
+ sleep 1
 
-echo "media= $media"
+} | whiptail --gauge "Analisando sua vocação" 6 60 0

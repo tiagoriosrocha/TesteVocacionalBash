@@ -225,6 +225,21 @@ case "$q10" in
 esac
 
 ############################################################
+#exibindo barra de progresso
+
+{
+ echo 25
+ sleep 1
+ echo 50
+ sleep 1
+ echo 75 
+ sleep 1
+ echo 100
+ sleep 1
+
+} | whiptail --gauge "Analisando sua vocação" 6 60 0
+
+############################################################
 #calculando e exibindo o resultado
 
 sum=$(($pq1+$pq2+$pq3+$pq4+$pq5+$pq6+$pq7+$pq8+$pq9+$pq10))
@@ -255,6 +270,8 @@ whiptail --title "O que faz o cientista da computação?" --msgbox "O bacharel�
 
 echo "$nome;$telefone;$email;$q1;$q2;$q3;$q4;$q5;$q6;$q7;$q8;$q9;$q10;$media" >> respostas_teste.txt
 
+
+sl -la
 
 done
 
